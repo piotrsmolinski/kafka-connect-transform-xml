@@ -1,3 +1,6 @@
+![Maven Central](https://img.shields.io/maven-central/v/com.github.jcustenborder.kafka.connect/kafka-connect-transform-xml.svg)
+[![Github Releases](https://img.shields.io/github/downloads/jcustenborder/kafka-connect-transform-xml/total.svg)](https://github.com/jcustenborder/kafka-connect-transform-xml/releases/latest)
+
 # Introduction
 
 This project provides transformations for Kafka Connect that will convert XML text to a Kafka Connect
