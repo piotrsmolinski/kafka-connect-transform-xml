@@ -84,13 +84,13 @@ public abstract class FromXml<R extends ConnectRecord<R>> extends BaseTransforma
     final Struct struct;
     if (element instanceof Connectable) {
       Connectable connectable = (Connectable) element;
-      struct = connectable.toConnectStruct();
+      struct = connectable.toStruct();
     } else if (element instanceof JAXBElement) {
       JAXBElement jaxbElement = (JAXBElement) element;
 
       if (jaxbElement.getValue() instanceof Connectable) {
         Connectable connectable = (Connectable) jaxbElement.getValue();
-        struct = connectable.toConnectStruct();
+        struct = connectable.toStruct();
       } else {
         throw new DataException(
             String.format(
