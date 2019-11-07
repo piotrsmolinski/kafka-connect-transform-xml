@@ -151,6 +151,10 @@ public class XSDCompiler implements Closeable {
 
     DiagnosticCollector<JavaFileObject> diagnostics = new DiagnosticCollector<>();
     JavaCompiler javaCompiler = ToolProvider.getSystemJavaCompiler();
+    if (javaCompiler == null) {
+      throw new RuntimeException("Java compiler is not available; please make sure the JDK is installed");
+    }
+
     Locale locale = Locale.getDefault();
 
     try (StandardJavaFileManager fileManager = javaCompiler.getStandardFileManager(diagnostics, locale, null)) {
